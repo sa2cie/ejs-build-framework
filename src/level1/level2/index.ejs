@@ -1,0 +1,59 @@
+<%
+path = setPath(setPathArray, filename);
+title = 'ページタイトル';
+description = 'ディスクリプション';
+keywords = 'キーワード';
+ogurl = '';
+ogimage = '';
+ogtype = '';
+-%>
+
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-language" content="ja">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="<%= keywords %>">
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:description" content="<%= description %>">
+    <meta property="og:url" content="<%= ogurl %>">
+    <meta property="og:image" content="<%= ogimage %>">
+    <meta property="og:type" content="<%= ogtype %>">
+    <title><%= title %></title>
+    <link rel="shortcut icon" href="<%= path %>/favicon.ico" />
+    <link rel="apple-touch-icon" href="<%= path %>/apple-touch-icon.png" />
+    <!-- Style - Base //// ================================================== -->
+    <link rel="stylesheet" href="<%= path %>/common/css/style.css">
+    <!-- //// Style - Base ================================================== -->
+  </head>
+
+  <body>
+
+    <!-- Layout - Container //// ================================================== -->
+    <div class="l-container">
+
+      <%- include('../../common/_include/_header.ejs') %>
+
+      <!-- Layout - Content //// ================================================== -->
+      <div class="l-content">
+        <section class="section">
+          <h1>見出し</h1>
+          <p>コンテンツが入ります</p>
+        </section>
+        <!-- /.section -->
+      </div>
+      <!-- //// Layout - Content ================================================== -->
+
+      <%- include('../../common/_include/_footer.ejs') %>
+      <%- include('../../common/_include/_script.ejs') %>
+
+    </div>
+    <!-- //// Layout - Container ================================================== -->
+
+  </body>
+</html>
